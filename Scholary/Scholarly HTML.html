@@ -4,6 +4,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Scholarly HTML</title>
+	<link rel="stylesheet" href="scholarly.min.css">
   </head>
     <header>
       <div class="banner">
@@ -87,6 +88,7 @@
         <h3><span>3.3 </span>Storage</h3>
         <p>
         The information regarding hazards and buildings (currently only hospitals) will be stored in a knowledge database using the RDF format. Queries for this database will be done using a SPARQL endpoint.
+		We will be using RdfStore for working wth rdf`s also for storage rdf data.
         </p>
         </section>
 
@@ -94,7 +96,9 @@
     <section id="tech">
       <h2><span>4. </span>Technologies</h2>
         <p>
-        The technologies used for this project are: Angular 7 for the front-end component, Node.js for the back-end component, TBD for the knowledge storage and a SPARQL endpoint.
+        The technologies used for this project are: Angular 7 for the front-end component, Node.js for the back-end component, RdfStore for the knowledge storage and a SPARQL endpoint.
+		 we chosed RdfStore becouse is compatible with SPARQL 1.0 and alost total coverage for 1.1 also becouse we can mange RDF storage or queries.
+		 For image conversion we used an online svg convertor. We will use express to build our api in node.js it will work with http req, http response messages.
         </p>
         <h3><span>4.1 </span>Angular 7</h3>
         <p>
@@ -102,7 +106,7 @@
         </p>
         <h3><span>4.2 </span>Node.js</h3>
         <p>
-        Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.
+        Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser. We will use node.js with express and RdfStore to build our Api.
         </p>
           <h3><span>4.3 </span>Github</h3>
           <p>
@@ -115,17 +119,30 @@
           <h3><span>4.5 </span>RDF</h3>
           <p>
             The Resource Description Framework is a family of World Wide Web Consortium specifications originally designed as a metadata data model.
+			The RDF data model is similar to classical conceptual modeling approaches (such as entity–relationship or class diagrams). 
+			It is based on the idea of making statements about resources (in particular web resources) in expressions of the form subject–predicate–object, known as triples. 
+			The subject denotes the resource, and the predicate denotes traits or aspects of the resource, and expresses a relationship between the subject and the object.
           </p>
 		  <h3><span>4.6 </span>SPARQL</h3>
 		  <p>
 			SPARQL is an RDF query language—that is, a semantic query language for databases—able to retrieve and manipulate data stored in Resource Description Framework format.
+			We wll need SPARQL 1.0 becouse we will make just get requests we don`t need to update our RDF storage. 
 		  </p>
       </section>
 
       <section id="pov">
         <h2><span>5. </span>Progress</h2>
         <p>
-            The UI of the application has been created
+            The UI of the application has been created, alse we made UML-diagrams and business diagrams, we decided on the tehnologies we will use and our strategy to complete this project.
         </p>
       </section>
-</body></html>
+	  
+	  <section id="chalanges">
+        <h2><span>6. </span>Chalanges</h2>
+        <p>
+            We tried to find the tehnologies necessary for project we concluded we need angluar 6 but then it appeared angular 7 so we changed t angular 7 than we had weekly meetings where we discused our arhitecture and how the aplication will work.
+			We decided we will make Ui have a map with hazards and on back-end a Rdf storage with a controller to consume the Api.
+        </p>
+      </section>
+</body>
+</html>
