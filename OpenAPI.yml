@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: HAnt API
+  version: 0.0.1
+paths:
+  /localhost:4200: 
+    get: 
+      operationId: getHazardMap
+      parameters: -
+        in: path
+        required: true
+        schema: -
+          type: string
+      responses: 
+        '200':
+          description: Active Hazard
+          content: 
+            description: Map request received.
+            application/json:
+              schema: 
+                $ref: '#/components/schemas/https://schema.org/accessibilityHazard'
+                description: Send hazard map
+        '204':
+                  description: |
+                    Your server should return this HTTP Status code if no longer active hazards
+        '303':
+                  description: |
+                    Redirect to loading screen
+                    
+    localhost:4200/details
+    get: 
+      operationId: getHazardDetails
+      parameters: 
+      - name: hazardName,
+     - coordinations: json{
+                                     lat: number,
+                                     long: number}
+        in: path
+        required: true
+        schema: https://schema.org/accessibilityHazard
+          type: RDF object
+      responses: 
+        '200':
+          description: Active Hazard with details and advices
+          content:
+            application/json:
+              schema: 
+                $ref:https://schema.org/Person
+                        https://schema.org/Hospital
+                        
+                    

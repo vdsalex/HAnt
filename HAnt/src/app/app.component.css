@@ -1,0 +1,123 @@
+/*@import '@angular/material/prebuilt-themes/indigo-pink.css';*/
+
+.container
+{
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+agm-info-window
+{
+  background-color: red;
+}
+
+mat-toolbar
+{
+  background-color: #1d1d1d;
+}
+
+#header
+{
+  top: 0;
+  left: 0;
+  display: grid;
+  height: 4.0em;
+}
+
+#footer
+{
+  bottom: 0;
+  left: 0;
+  height: 2em;
+}
+
+#title, #title-description
+{
+  font-family: Impact, Charcoal, sans-serif;
+  color: #ff8b00;
+}
+
+#title
+{
+  font-size: xx-large;
+}
+
+#title-description
+{
+  font-size: large;
+}
+
+agm-map
+{
+  height: 33.8em;
+}
+
+.footer-info
+{
+  font-family: Impact, Charcoal, sans-serif;
+  color: #ff8b00;
+  font-size: small;
+  position: relative;
+}
+
+.footer-info:first-child
+{
+  left: 0;
+}
+
+.footer-info:nth-child(2)
+{
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-info:last-child
+{
+  right: 0;
+}
+
+.agm-info-window-mydiv
+{
+  /*background-color: red;*/
+}
+
+.agm-info-window-h2
+{
+  width: 100%;
+  text-align: center;
+}
+
+.agm-info-window-infolist
+{
+  /*background-color: aqua;*/
+  list-style: none;
+  padding: 0 15px;
+}
+
+.agm-info-window-button
+{
+  font-family: Impact, Charcoal, sans-serif;
+  color: #ff8b00;
+  background-color: #1d1d1d;
+  border: none;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+@media screen and (min-height: 1080px)
+{
+  agm-map
+  {
+    height: 52em;
+  }
+}
