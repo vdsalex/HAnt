@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://w3c.github.io/scholarly-html/#ref-HTML -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Scholarly HTML</title>
+  </head>
+    <header>
+      <div class="banner">
+        <img src="./Scholarly HTML_files/scholarly-html.svg" width="227" height="50" alt="Scholarly HTML logo">
+      </div>
+      <h1>Hazard Smart Assistant Scholarly HTML</h1>
+    </header>
+
+    <div role="contentinfo"><ol role="directory">
+        <li><a>Abstract</a></li>
+        <li><a>Introduction</a></li>
+        <li><a>Structure</a></li>
+        <li><a>Technologies</a></li>
+		<li><a>Progress</a></li>
+      <dl>
+        <dt>Authors</dt>
+        <dd>
+          <a href="https://www.facebook.com/raresarv">Arvinte Rares</a>,
+          <a href="https://www.facebook.com/leustean.andrei.97">Leustean Andrei</a>
+		  <a href="https://www.facebook.com/voaides.alexandru">Voaides Alexandru</a>
+        </dd>
+      </dl>
+    </div>
+    <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+      <h2><span>1. </span>Abstract</h2>
+      <p>
+        Hazard Smart Assistant is a web application whose purpose is to provide real-time information about currently occurring natural disasters.
+      </p>
+    </section>
+    <section id="introduction" role="doc-introduction">
+      <h2><span>2. </span>Introduction</h2>
+      <p>
+        Hazard Smart Assistant is an online tool created for collecting and sharing information regarding natural disasters, such as: fire, floods, earthquakes and tornadoes. We consider as relevant any of the following data about a natural disaster: the nature of the disaster, the location of the disaster, the location of the disaster, areas around the hazard and the time when the hazard was reported. The collected data is then highlighted in an interactive map through map markers, which offer all of the information regarding a hazard: the location shown by the marker is the location of the disaster, and, upon clicking any marker, a dialog will appear above it showing: the type of the disaster, weather conditions and the time when it was reported, as well as a button that will redirect to a new page containing more details about the disaster, such as: degree of danger, number of victims, impacted area(s) and more. 
+      </p>
+	<p>
+		This data is then sent to the relevant authorities and waits for updates from them, while logging further updates. All these updates will be shown in the map page, while updates regarding any particular hazard will be available in the details page of said hazard.
+	</p>
+    </section>
+    <section id="structure">
+      <h2><span>3. </span>Structure</h2>
+      <p>
+        Being a web application, Hazard Smart Assistant has 3 parts: Front-end, Back-end and storage.
+      </p>
+
+      <section id="front">
+        <h3><span>3.1 </span>Front-end</h3>
+        <p>
+        The front-end component contains 3 pages: the main page, the map page and the details page.
+        </p>
+		<p>
+		The main page has the application logo and acts as a "loading screen", as the logo will spin while there are no active hazards.
+		</p>
+		<p>
+		The map page presents a marked Google Map, along a textbox. Whenever a hazard becomes active (through a reporting process), the user will be automatically redirected to this page, where hazard locations are shown via Google Map markers. Upon clicking a marker, more data regarding it's corresponding hazard will be shown, as well as a "details" button for the history of said hazard. The textbox contains the history of all the hazards as short descriptions like "X hazard happened at Y location", and it will be dynamically updated whenever a new hazard becomes active.
+		</p>
+		<p>
+		The details page contains all the data related to a particular hazard, such as: hazard type, initial location, spread, hazard history, current status (active / inactive), date and time of detection. To access this page, the user has to select any marker on the map page and then click the "details" button.
+		</p>
+	  </section>
+      <section id="back">
+        <h3><span>3.2 </span>Back-end</h3>
+        <p>
+        The back-end component contains the functional side of the project, having as the main modules the detection, marking, forwarding and tracking of a hazard.
+        </p>
+		<p>
+		Considering that most areas are equipped with sensors for fire, flood, earthquake and wind speed, a hazard is detected whenever a sensor sends a message or signal reporting the appearance of a hazard type. If no hazard is detected for a considerable amount of time or all hazards have been resolved, the user will be redirected to the main page while being given the possibility to access the map page.
+		</p>
+		<p>
+		Upon detecting a hazard, it's location is marked on the map by using the gps sensor connected to the reportng sensor. From this point on, the hazard is considered as "active"
+		</p>
+		<p>
+		The forwarding module contains two functions: announcement function and instruction function. 
+		The announcement function sends the hazard data to the authorities and further updates this data until the hazard is resolved, at which point the hazard will be considered inactive. The authorities will first receive the hazard type and location, while being able to send back messages like: "intervention", "evacuating" and "finished". When the "finished" message is received, the hazard is considered to be resolved.
+		The instruction function will send evacuation instructions if the location of the hazard is a building. These instructions will prioritize the evacuation of superior floors, as well as the evacuation of people with high mobility abilities or good health in this order.
+		</p>
+		<p>
+		Finally, the tracking module will record all updates regarding a hazard, from it's detection, to the actions taken(evacuation, announcement of authorities, fighting the hazard - when possible), to it's resolving and dynamically update the textbox in the map page, as well as the details page for the specific hazard, whenever a new action is taken regarding said hazard. This is done in order to allow following a singular hazard when multiple hazards take place at the same time, while also showing how many hazards are active at a given moment.
+		</p>
+		</section>
+		<section id="storage">
+        <h3><span>3.3 </span>Storage</h3>
+        <p>
+        The information regarding hazards and buildings (currently only hospitals) will be stored in a knowledge database using the RDF format. Queries for this database will be done using a SPARQL endpoint.
+        </p>
+        </section>
+
+
+    <section id="tech">
+      <h2><span>4. </span>Technologies</h2>
+        <p>
+        The technologies used for this project are: Angular 7 for the front-end component, Node.js for the back-end component, TBD for the knowledge storage and a SPARQL endpoint.
+        </p>
+        <h3><span>4.1 </span>Angular 7</h3>
+        <p>
+        Angular 7 is the latest version of the angular framework, which is a TypeScript-based open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations.
+        </p>
+        <h3><span>4.2 </span>Node.js</h3>
+        <p>
+        Node.js is an open-source, cross-platform JavaScript run-time environment that executes JavaScript code outside of a browser.
+        </p>
+          <h3><span>4.3 </span>Github</h3>
+          <p>
+            GitHub Inc. is a web-based hosting service for version control using Git. It offers all of the distributed version control and source code management (SCM) functionality of Git as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+          </p>
+          <h3><span>4.4 </span>WebStorm</h3>
+          <p>
+            WebStorm is a cross-platform IDE primarily for web, JavaScript and TypeScript development.
+          </p>
+          <h3><span>4.5 </span>RDF</h3>
+          <p>
+            The Resource Description Framework is a family of World Wide Web Consortium specifications originally designed as a metadata data model.
+          </p>
+		  <h3><span>4.6 </span>SPARQL</h3>
+		  <p>
+			SPARQL is an RDF query language—that is, a semantic query language for databases—able to retrieve and manipulate data stored in Resource Description Framework format.
+		  </p>
+      </section>
+
+      <section id="pov">
+        <h2><span>5. </span>Progress</h2>
+        <p>
+            The UI of the application has been created
+        </p>
+      </section>
+</body></html>
