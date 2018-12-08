@@ -1,0 +1,151 @@
+body
+{
+    background-color: #011A27;
+}
+
+/*      MAIN DIV     */
+
+*
+{
+    user-select: none;
+}
+
+#RegisterHeading
+{
+    /*background-color: plum;*/
+    width: 100%;
+    text-align: center;
+    margin: 7px auto;
+    color: #D5D6D2;
+    /*color: black;*/
+}
+
+#RegisterMainDiv
+{
+    /*background-color: #E4E3DB;*/
+    height: 310px;
+    /*width: 30%;*/
+    width: 507px;
+    min-width: 507px;
+    border-radius: 12px;
+    /* centering h and v */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#RegisterInnerDiv
+{
+    /*background-color: orangered;*/
+    width: 100%;
+    left: 0;
+    /* centering vertically */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#RegisterForm
+{
+    /*background-color: brown;*/
+    width: 100%;
+    margin: 35px auto 0;
+    text-align: center;
+}
+
+#RegisterFormSubmit
+{
+    position: relative;
+    width: 65%;
+    color: #D5D6D2;
+    background-color: #F0810F;
+}
+
+#RegisterSubmit:focus
+{
+    outline: none;
+}
+
+#inputUsername, #inputPassword, #inputConfirmPassword
+{
+    color: black;
+}
+
+.username-and-password-div
+{
+    /*background-color: cadetblue;*/
+    width: 65%;
+    margin: 15px auto;
+}
+
+.custom-control
+{
+    /*background-color: cadetblue;*/
+    color: black;
+    height: 60px;
+    margin: 5px 0;
+}
+
+.custom-control-label
+{
+    /*background-color: aqua;*/
+    margin: 0 4px;
+    color: #D5D6D2;
+}
+
+#roleDiv
+{
+    /*background-color: darkgreen;*/
+    padding: 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#roleInputs
+{
+    /*background-color: burlywood;*/
+    height: 37px;
+}
+
+#roleInfo
+{
+    /*background-color: blueviolet;*/
+    height: 125px;
+    margin: 25px 0;
+}
+
+#chooseRoleHeading
+{
+    /*background-color: chartreuse;*/
+    color: #D5D6D2;
+    margin: 25px 0 10px;
+}
+
+img
+{
+    max-height: 100%;
+    float: left;
+    /*background-color: #011A27;*/
+}
+
+#roleDescriptionDiv
+{
+    /*background-color: coral;*/
+    height: 100%;
+    padding-right: 0;
+}
+
+.role-description-title
+{
+    width: 100%;
+    /*background-color: aqua;*/
+    color: #E6DF44;
+}
+
+p
+{
+    /*background-color: darkolivegreen;*/
+    color: #E6DF44;
+}
