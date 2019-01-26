@@ -3,8 +3,6 @@ body
     background-color: #011A27;
 }
 
-/*      MAIN DIV     */
-
 *
 {
     user-select: none;
@@ -12,20 +10,18 @@ body
 
 #RegisterHeading
 {
-    /*background-color: plum;*/
+    background-color: #011A27;
     width: 100%;
-    text-align: center;
-    margin: 7px auto;
     color: #D5D6D2;
-    /*color: black;*/
+    padding: 10px 20px;
 }
 
 #RegisterMainDiv
 {
-    /*background-color: #E4E3DB;*/
+    /*background-color: #F0810F;*/
     height: 310px;
     /*width: 30%;*/
-    width: 507px;
+    width: 807px;
     min-width: 507px;
     border-radius: 12px;
     /* centering h and v */
@@ -38,29 +34,24 @@ body
 
 #RegisterInnerDiv
 {
-    /*background-color: orangered;*/
+    background-color: #011A27;
+    border-radius: 5px;
     width: 100%;
     left: 0;
     /* centering vertically */
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+
+    padding: 0;
 }
 
 #RegisterForm
 {
     /*background-color: brown;*/
     width: 100%;
-    margin: 35px auto 0;
+    margin: 35px auto 15px;
     text-align: center;
-}
-
-#RegisterFormSubmit
-{
-    position: relative;
-    width: 65%;
-    color: #D5D6D2;
-    background-color: #F0810F;
 }
 
 #RegisterSubmit:focus
@@ -68,9 +59,30 @@ body
     outline: none;
 }
 
-#inputUsername, #inputPassword, #inputConfirmPassword
+#inputUsername,
+#inputPassword,
+#inputConfirmPassword,
+#inputEmail
 {
     color: black;
+}
+
+#inputUsername::placeholder,
+#inputPassword::placeholder,
+#inputConfirmPassword::placeholder,
+#inputEmail::placeholder
+{
+    color: #4f4f4f !important;
+    /*font-weight: bold;*/
+}
+
+#inputUsername:focus,
+#inputPassword:focus,
+#inputConfirmPassword:focus,
+#inputEmail:focus
+{
+    outline: none !important;
+    box-shadow: none;
 }
 
 .username-and-password-div
@@ -78,13 +90,14 @@ body
     /*background-color: cadetblue;*/
     width: 65%;
     margin: 15px auto;
+    display: flex;
 }
 
 .custom-control
 {
     /*background-color: cadetblue;*/
     color: black;
-    height: 60px;
+    height: 30px;
     margin: 5px 0;
 }
 
@@ -95,14 +108,6 @@ body
     color: #D5D6D2;
 }
 
-#roleDiv
-{
-    /*background-color: darkgreen;*/
-    padding: 0;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 #roleInputs
 {
     /*background-color: burlywood;*/
@@ -111,23 +116,19 @@ body
 
 #roleInfo
 {
-    /*background-color: blueviolet;*/
+    /*background-color: #011A27;*/
     height: 125px;
     margin: 25px 0;
+    /*text-shadow: 2px 2px 4px #000000;*/
+    /*border-radius: 7px;*/
 }
 
 #chooseRoleHeading
 {
     /*background-color: chartreuse;*/
     color: #D5D6D2;
-    margin: 25px 0 10px;
-}
-
-img
-{
-    max-height: 100%;
-    float: left;
-    /*background-color: #011A27;*/
+    margin: 0 0 10px;
+    font-size: 15pt;
 }
 
 #roleDescriptionDiv
@@ -135,17 +136,103 @@ img
     /*background-color: coral;*/
     height: 100%;
     padding-right: 0;
+    padding-left: 0;
+    width: 90%;
 }
 
 .role-description-title
 {
     width: 100%;
     /*background-color: aqua;*/
-    color: #E6DF44;
+    color: #D5D6D2;
+    margin-bottom: 0.8em;
 }
 
 p
 {
     /*background-color: darkolivegreen;*/
+    color: #D5D6D2;
+}
+
+.input-group-text
+{
     color: #E6DF44;
+    background: #F0810F;
+    border-color: #F0810F;
+}
+
+#inputFieldsDiv
+{
+    /*background-color: darkturquoise;*/
+    padding: 0;
+    width: 50%;
+    margin: 0;
+}
+
+#roleDiv
+{
+    /*background-color: darkgreen;*/
+    padding: 0;
+    text-align: center;
+    width: 50%;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #F0810F;
+    margin: 0 auto;
+}
+
+#inputFieldsAndRoleDiv
+{
+    width: 100%;
+    margin: 25px 0;
+    padding: 0;
+    /*background-color: darkred;*/
+    display: flex;
+}
+
+#buttonsDiv
+{
+    /*background-color: black;*/
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+#haveAccountDiv
+{
+    /*background-color: darkred;*/
+    width: auto;
+    height: auto;
+    display: flex;
+    padding: 0;
+}
+
+.centeringButtons
+{
+    width: 450px;
+    /*background-color: darkolivegreen;*/
+    display: flex;
+    padding: 0;
+}
+
+#RegisterFormSubmit
+{
+    width: 45%;
+    color: #b7b8b4;
+    background-color: #F0810F;
+}
+
+#RegisterFormSubmit:hover
+{
+    background-color: #c6630f;
+}
+
+#linkToLogin
+{
+    color: #D5D6D2;
+}
+
+#linkToLogin:hover
+{
+    color: #E6DF44;
+    text-decoration: underline;
 }

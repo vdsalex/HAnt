@@ -8,33 +8,17 @@ function radioValueChanged(input)
         {
             case 'rescuer':
             {
-                document.getElementById('roleImg').setAttribute('src', './res/firefighter.png');
+                // document.getElementById('roleImg').setAttribute('src', './res/firefighter.png');
                 document.getElementById('roleTitle').innerHTML = 'Rescuer';
-                document.getElementById('roleDescriptionParagraph').innerHTML = 'As rescuer, your duty is to inform the hospital about your current position and number of members in your squad.';
+                document.getElementById('roleDescriptionParagraph').innerHTML = 'Rescuer\'s duty is to inform the hospital about its current state and assume responsibility for the people in danger.';
                 break;
             }
 
-            case 'patient':
+            case 'rescued':
             {
-                document.getElementById('roleImg').setAttribute('src', './res/transfusion.png');
-                document.getElementById('roleTitle').innerHTML = 'Patient';
-                document.getElementById('roleDescriptionParagraph').innerHTML = 'As patient, you must wait for rescue squad\'s notifications in order to give you the proper instructions.';
-                break;
-            }
-
-            case 'common user':
-            {
-                document.getElementById('roleImg').setAttribute('src', './res/multiple-users-silhouette.png');
-                document.getElementById('roleTitle').innerHTML = 'Common User';
-                document.getElementById('roleDescriptionParagraph').innerHTML = 'The common user\'s role is to pay attention to the environment and signal the noticed hazards.';
-                break;
-            }
-
-            case 'administrator':
-            {
-                document.getElementById('roleImg').setAttribute('src', './res/hospital-buildings.png');
-                document.getElementById('roleTitle').innerHTML = 'Administrator';
-                document.getElementById('roleDescriptionParagraph').innerHTML = 'The administrator is responsible with the hospital design plan which must be updated when a change is made. ';
+                // document.getElementById('roleImg').setAttribute('src', './res/hand_on_a_hand.png');
+                document.getElementById('roleTitle').innerHTML = 'Rescued';
+                document.getElementById('roleDescriptionParagraph').innerHTML = 'As a person to be rescued, you must wait for rescue squad\'s notifications in order to give you the proper instructions.';
                 break;
             }
         }
