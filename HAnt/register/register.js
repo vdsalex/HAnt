@@ -18,7 +18,15 @@ function radioValueChanged(input)
             {
                 // document.getElementById('roleImg').setAttribute('src', './res/hand_on_a_hand.png');
                 document.getElementById('roleTitle').innerHTML = 'Rescued';
-                document.getElementById('roleDescriptionParagraph').innerHTML = 'As a person to be rescued, you must wait for rescue squad\'s notifications in order to give you the proper instructions.';
+                document.getElementById('roleDescriptionParagraph').innerHTML = 'As a person to be rescued, you must follow the instructions on the window in order to be safe.';
+                break;
+            }
+
+            case 'admin':
+            {
+
+                document.getElementById('roleTitle').innerHTML = 'Administrator';
+                document.getElementById('roleDescriptionParagraph').innerHTML = 'The Administrator must upload the proper floor plans of the hospital so the people could orient easily through building when the hazard happens.';
                 break;
             }
         }

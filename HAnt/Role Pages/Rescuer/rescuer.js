@@ -1,4 +1,5 @@
 let previousPressedButton = null;
+let displayedDiv = null;
 
 function hoverButton(btn)
 {
@@ -28,6 +29,36 @@ function clickButton(btn)
         {
             previousPressedButton.style.color = "#D5D6D2";
             previousPressedButton.style.borderBottomColor = "#011A27";
+        }
+
+        switch(btn.getAttribute('value'))
+        {
+            case "near-hazards":
+            {
+                displayedDiv.style.display = "none";
+                displayedDiv = document.getElementById("nearHazardsDiv");
+                displayedDiv.style.display = "block";
+
+                break;
+            }
+
+            case "engaged-hazard":
+            {
+                displayedDiv.style.display = "none";
+                displayedDiv = document.getElementById("engagedHazardDiv");
+                displayedDiv.style.display = "flex";
+
+                break;
+            }
+
+            case "archive":
+            {
+                displayedDiv.style.display = "none";
+                displayedDiv = document.getElementById("archiveDiv");
+                displayedDiv.style.display = "block";
+
+                break;
+            }
         }
 
         previousPressedButton = btn;
@@ -73,4 +104,19 @@ function previousFloor()
 
 }
 
-clickButton(document.getElementById("nearHazardsButton"));
+function updateTime()
+{
+    const currentTime = new Date();
+    document.getElementById("currentTime").innerHTML = currentTime.getDate() + "-" +
+        (currentTime.getMonth()+1) + "-" +
+         currentTime.getFullYear() + " " +
+        currentTime.getHours() + ":" + currentTime.getMinutes();
+
+    setTimeout(updateTime, 60000); // 60s
+}
+
+
+updateTime();
+
+displayedDiv = document.getElementById("engagedHazardDiv");
+clickButton(document.getElementById("engagedHazardButton"));

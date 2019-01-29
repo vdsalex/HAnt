@@ -1,0 +1,173 @@
+#engagedHazardDiv
+{
+    margin: 40px auto 0;
+    width: 95%;
+    height: 460px;
+    /*background-color: #E6DF44;*/
+    padding: 0;
+    /*border-left: solid 1px #F0810F;*/
+
+    display: none;
+}
+
+#floorPlanBtnsAndTimeDiv
+{
+    width: 75%;
+    height: 100%;
+    /*background-color: dodgerblue;*/
+    padding: 0;
+    margin: 0;
+
+    display: block;
+}
+
+#floorPlanDiv
+{
+    width: 100%;
+    height: 85%;
+    /*background-color: #ae0027;*/
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+}
+
+#floorPlanImg
+{
+    width: 80%;
+    height: auto;
+
+    margin: auto;
+}
+
+#buttonsAndTimeDiv
+{
+    width: 100%;
+    height: 15%;
+    /*background-color: blueviolet;*/
+
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+}
+
+#abandonButtonDiv
+{
+    width: 33.33%;
+    height: 100%;
+    /*background-color: darkkhaki;*/
+    display: flex;
+}
+
+#changeFloorButtonsDiv
+{
+    width: 33.33%;
+    height: 100%;
+    /*background-color: crimson;*/
+    display: flex;
+}
+
+#timeDiv
+{
+    width: 33.33%;
+    height: 100%;
+    /*background-color: #c6630f;*/
+    display: flex;
+}
+
+#abandonButton,
+.change-floor-button,
+#currentTime
+{
+    margin: auto;
+    color: #D5D6D2;
+}
+
+#abandonButton:focus,
+.change-floor-button:focus
+{
+    box-shadow: none;
+    outline: none;
+}
+
+#abandonButton
+{
+    background-color: #F0810F;
+}
+
+#abandonButton:hover
+{
+    background-color: #ce6d0f;
+}
+
+.change-floor-button
+{
+    background-color: #4b4b4b;
+}
+
+.change-floor-button:hover
+{
+    background-color: #3e3e3e;
+}
+
+#instructionsWindowExternalDiv
+{
+    width: 25%;
+    height: 100%;
+    /*background-color: #66682c;*/
+
+    padding: 0;
+    margin: 0;
+}
+
+#instructionsWindowInternalDiv
+{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    padding: 0;
+    margin: 0;
+
+    border-radius: 12px;
+}
+
+#instructionsList
+{
+    list-style: none;
+    overflow-y: auto;
+    /*background-color: #f1f1f1;*/
+    padding: 10px;
+    height: 100%;
+}
+
+.instruction-item
+{
+    /*background-color: #ae0027;*/
+    display: block;
+    margin: 10px 5px;
+    /*border-radius: 12px;*/
+    border-left: solid 2px #F0810F;
+}
+
+.instruction-text
+{
+    /*background-color: #c6630f;*/
+    margin: 0;
+    padding: 5px;
+    /*border-left: solid 2px green;*/
+    /*border-bottom: solid 2px green;*/
+    color: black;
+}
+
+.instruction-time
+{
+    margin: 0;
+    /*background-color: plum;*/
+    text-align: end;
+    /*border-right: solid 2px blue;*/
+    padding: 3px 10px;
+    color: #373737;
+}
