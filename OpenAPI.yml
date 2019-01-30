@@ -1,0 +1,798 @@
+openapi: 3.0.0
+info:
+  title: HAnt API
+  version: 0.0.1
+servers:
+    -url: 127.0.0.1
+paths:
+  /localhost:4200: 
+        get: 
+          operationId: getHazardMap
+          parameters: -
+            in: path
+            required: true
+            schema: -
+              type: string
+          responses: 
+            '200':
+              description: Send hazard map
+              content: 
+                application/rdf:
+                  schema: 
+                    $ref: '#/components/schemas/https://schema.org/accessibilityHazard'
+            '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hazards
+            '303':
+                      description: |
+                        Redirect to loading screen
+            '400':
+                description: map accessed by hazard sensors
+                content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '401':
+                description: map accessed by unauthenthicated users
+                content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '404': 
+                description: Hazard map not found
+                content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '403':
+                description: Unauthorized user tried to access the map
+                content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '418':
+                description: Return teapot-brewed coffee
+                content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '429':
+                description: Too many requests
+                content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '500':
+              description: Internal server error
+              content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '501':  
+              description: Not implemented
+              content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+            '503':
+              description: Service unavailable
+              content: 
+                    application/rdf:
+                      schema: 
+                        $ref: errorSchema
+    localhost:4200/hazards
+    /hazards:
+            get:
+                summary: List all hazards
+                operationID: listHazards
+                tags:
+                    - hazards
+                parameters:
+                    - name: limit
+                    in: query
+                    description: How many items to return at one time (max 20)
+                    required: false
+                    schema:
+                        type: integer
+                        format: int32
+                responses:
+                    '200':
+                        description: A list of hazards
+                        headers:
+                            x-next:
+                                type: string
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hazards
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: map accessed by hazard sensors
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: map accessed by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '404': 
+                        description: Hazard map not found
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to access the map
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+            post:
+                summary: Create a hazard
+                operationId: createHazard
+                tags:
+                    - hazards
+                responses:
+                    '201':
+                        description: Null response
+                    default:
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hazards
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: map accessed by hazard sensors
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: map accessed by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '404': 
+                        description: Hazard map not found
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to access the map
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+        /hazards/{hazardId}	:
+            get:
+                summary: Info for a specific hazard
+                operationId: showHazardById
+                tags:
+                    - hazards
+                parameters:
+                    - name: petId
+                        in: path
+                        required: true
+                        description: The id of the hazard to retrieve
+                        schema:
+                            type: string
+                responses:
+                    '200':
+                        description: Expected response to a valid request for an existing, ongoing hazard
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hazards
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: map accessed by hazard sensors/ Bad request
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: map accessed by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '404': 
+                        description: Hazard map not found
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to access the map
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    'default':
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org/Error
+    /localhost:4200/hospitalAdmin:
+        get:
+            summary: Receive the hospital evacuation drawing existing in the system
+            operationId: getHospitalSchema
+            tags:
+                - hospital
+            parameters:
+                - hospitalId
+                in: path
+                required: true
+                description: The id of the hospital to be retrieved
+                schema:
+                    type: PNG
+                responses:
+                    '200':
+                        description: Deliver resource
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: HospitalSchema
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hospital
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: map accessed by non-hospital administrator users/ Bad request
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: map accessed by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '404': 
+                        description: Hospital schema not found
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to access the hospital schema
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    'default':
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org/Error
+        put:
+            summary: Upload the hospital evacuation drawing existing in the system
+            operationId: putHospitalSchema
+            tags:
+                - hospital
+            parameters:
+                - hospitalId
+                in: path
+                required: true
+                description: The id of the hospital to be retrieved
+                schema:
+                    type: PNG
+                responses:
+                    '200':
+                        description: Resource uploaded successfully
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: HospitalSchema
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hospital
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: Hospital schema uploaded by non-hospital administrator users/ Bad request
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: Hospital schema uploaded by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to upload the hospital schema
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    'default':
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org/Error        
+        post:
+            summary: Update the hospital evacuation drawing existing in the system
+            operationId: putHospitalSchema
+            tags:
+                - hospital
+            parameters:
+                - hospitalId
+                in: path
+                required: true
+                description: The id of the hospital to be retrieved
+                schema:
+                    type: PNG
+                responses:
+                    '200':
+                        description: Resource updated successfully
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: HospitalSchema
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hospital
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: Hospital schema updated by non-hospital administrator users/ Bad request
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: Hospital schema updated by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to update the hospital schema
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    'default':
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org/Error
+    components:
+        schemas:
+            Hazard:
+                required:
+                  - id
+                  - name
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  name:
+                    type: string
+                  tag:
+                    type: string
+            Hazards:
+                type: array
+                items:
+                    $ref = schema.org/Hazard
+            Error:
+                required:
+                  - code
+                  - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                  message:
+                    type: string
+                    
+    localhost:4200/rescuerMap
+        get:
+            summary: Receive the hospital evacuation schema with the location of every pacient present on every floor
+            operationId: getHospitalSchema
+            tags:
+                - hospital
+            parameters:
+                - hospitalId
+                in: path
+                required: true
+                description: The id of the hospital whose evacuation schema is to be retrieved
+                schema:
+                    type: RDF
+                responses:
+                    '200':
+                        description: Resource received
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: HospitalEvacuationSchema
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hospital
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: Hospital evacuation schema accessed by non-rescuer users/ Bad request
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: Hospital evacuation schema accessed by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '404': 
+                        description: Hospital evacuation schema not found
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to access the resource
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    'default':
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org/Error            
+    /localhost:4200/pacientMap
+        get:
+            summary: Receive the hospital evacuate schema with the location of every active sensor on every floor
+            operationId: getHospitalSchema
+            tags:
+                - hospital
+            parameters:
+                - hospitalId
+                in: path
+                required: true
+                description: The id of the hospital whose evacuate schema is to be retrieved
+                schema:
+                    type: RDF
+                responses:
+                    '200':
+                        description: Resource received
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: HospitalEvacuationSchema
+                    '204':
+                      description: |
+                        Your server should return this HTTP Status code if no longer active hospital
+                    '303':
+                              description: |
+                                Redirect to loading screen
+                    '400':
+                        description: Hospital evacuation schema accessed by non-rescuer users/ Bad request
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '401':
+                        description: Hospital evacuation schema accessed by unauthenthicated users
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '404': 
+                        description: Hospital evacuation schema not found
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '403':
+                        description: Unauthorized user tried to access the resource
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '418':
+                        description: Return teapot-brewed coffee
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '429':
+                        description: Too many requests
+                        content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '500':
+                      description: Internal server error
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '501':  
+                      description: Not implemented
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    '503':
+                      description: Service unavailable
+                      content: 
+                            application/rdf:
+                              schema: 
+                                $ref: errorSchema
+                    'default':
+                        description: unexpected error
+                        content:
+                            application/rdf:
+                                schema:
+                                    $ref: schema.org/Error                           
+                    
+                    
+                    
+                    
+    localhost:4200/details
+    get: 
+      operationId: getHazardDetails
+      parameters: 
+      - name: hazardName,
+     - coordinations: json{
+                                     lat: number,
+                                     long: number}
+        in: path
+        required: true
+        schema: https://schema.org/accessibilityHazard
+          type: RDF object
+      responses: 
+        '200':
+          description: Active Hazard with details and advices
+          content:
+            application/json:
+              schema: 
+                $ref: https://schema.org/Person
+                          https://schema.org/Hospital
+                        
+                    
