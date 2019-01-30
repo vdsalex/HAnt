@@ -492,7 +492,7 @@ paths:
                                     $ref: schema.org/Error        
         post:
             summary: Update the hospital evacuation drawing existing in the system
-            operationId: putHospitalSchema
+            operationId: posttHospitalSchema
             tags:
                 - hospital
             parameters:
@@ -569,38 +569,10 @@ paths:
                             application/rdf:
                                 schema:
                                     $ref: schema.org/Error
-    components:
-        schemas:
-            Hazard:
-                required:
-                  - id
-                  - name
-                properties:
-                  id:
-                    type: integer
-                    format: int64
-                  name:
-                    type: string
-                  tag:
-                    type: string
-            Hazards:
-                type: array
-                items:
-                    $ref = schema.org/Hazard
-            Error:
-                required:
-                  - code
-                  - message
-                properties:
-                  code:
-                    type: integer
-                    format: int32
-                  message:
-                    type: string
                     
     localhost:4200/rescuerMap
         get:
-            summary: Receive the hospital evacuation schema with the location of every pacient present on every floor
+            summary: Receive the hospital evacuation schema with the location of every pacient (classified by health status) present on every floor as well as every active sensor
             operationId: getHospitalSchema
             tags:
                 - hospital
@@ -683,7 +655,8 @@ paths:
                         content:
                             application/rdf:
                                 schema:
-                                    $ref: schema.org/Error            
+                                    $ref: schema.org/Error     
+                                    
     /localhost:4200/pacientMap
         get:
             summary: Receive the hospital evacuate schema with the location of every active sensor on every floor
@@ -769,11 +742,37 @@ paths:
                         content:
                             application/rdf:
                                 schema:
-                                    $ref: schema.org/Error                           
-                    
-                    
-                    
-                    
+                                    $ref: schema.org/Error        
+    components:
+        schemas:
+            Hazard:
+                required:
+                  - id
+                  - name
+                properties:
+                  id:
+                    type: integer
+                    format: int64
+                  name:
+                    type: string
+                  tag:
+                    type: string
+            Hazards:
+                type: array
+                items:
+                    $ref = schema.org/Hazard
+            Error:
+                required:
+                  - code
+                  - message
+                properties:
+                  code:
+                    type: integer
+                    format: int32
+                  message:
+                    type: string
+
+    
     localhost:4200/details
     get: 
       operationId: getHazardDetails
