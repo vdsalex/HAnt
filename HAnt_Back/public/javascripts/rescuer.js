@@ -118,5 +118,5 @@ function updateTime()
 
 updateTime();
 
-displayedDiv = document.getElementById("engagedHazardDiv");
-clickButton(document.getElementById("engagedHazardButton"));
+displayedDiv = document.getElementById("nearHazardsDiv");
+clickButton(document.getElementById("nearHazardsButton"));

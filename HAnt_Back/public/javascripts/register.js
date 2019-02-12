@@ -1,6 +1,3 @@
-const marklogic = require('marklogic');
-console.dir(marklogic)
-
 function radioValueChanged(input)
 {
     const inputValue = input.getAttribute('value');
@@ -14,14 +11,6 @@ function radioValueChanged(input)
                 // document.getElementById('roleImg').setAttribute('src', './res/firefighter.png');
                 document.getElementById('roleTitle').innerHTML = 'Rescuer';
                 document.getElementById('roleDescriptionParagraph').innerHTML = 'Rescuer\'s duty is to inform the hospital about its current state and assume responsibility for the people in danger.';
-                break;
-            }
-
-            case 'rescued':
-            {
-                // document.getElementById('roleImg').setAttribute('src', './res/hand_on_a_hand.png');
-                document.getElementById('roleTitle').innerHTML = 'Rescued';
-                document.getElementById('roleDescriptionParagraph').innerHTML = 'As a person to be rescued, you must follow the instructions on the window in order to be safe.';
                 break;
             }
 

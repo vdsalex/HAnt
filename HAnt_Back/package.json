@@ -3,14 +3,23 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "tsc:w": "node ./node_modules/typescript/bin/tsc -w",
+    "endmeplz": "node %NODE_DEBUG_OPTION% ./bin/www --dev",
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.16.0",
+    "grunt-typescript": "^0.8.0",
     "morgan": "~1.9.0",
-    "neo4j-driver": "^1.7.2",
-    "rdfstore": "^0.9.17"
+    "passport-local": "^1.0.0",
+    "stardog": "^1.4.0",
+    "typescript": "^3.3.3"
   }
 }
