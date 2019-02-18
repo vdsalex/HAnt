@@ -1,0 +1,49 @@
+:Hazard a rdfs:Class .
+
+:Fire a owl:Class ;
+	rdfs:subClassOf :Hazard .
+
+:Flood a owl:Class ;
+	rdfs:subClassOf :Hazard .
+
+:Earthquake a owl:Class ;
+	rdfs:subClassOf :Hazard .
+
+:fireAtStSpiridon a :Fire ;
+	:id 1 ;
+	:type 'fire';
+	:location 'St. Spiridon';
+	:time 'Today, 10:54 PM';
+	:address '394 Maple Wood Way' ;
+	:patients 22 ;
+	:employees 23 ;
+	:contact '894-128-2938' ;
+	:rescuersInvolved 9;
+	:reportedCasualties 0;
+	:hazardStatus 'ongoing' .
+
+:floodAtMilitaryHospital a :Flood ;
+	:id 2 ;
+	:type 'flood';
+	:location 'Military Hospital';
+	:time 'Yesterday, 9:54 PM';
+	:address '246 Acker Point' ;
+	:patients 20 ;
+	:employees 21 ;
+	:contact '002-177-3621' ;
+	:rescuersInvolved 10;
+	:reportedCasualties 0;
+	:hazardStatus 'ongoing' .
+
+:earthquakeAtElCamino a :Earthquake ;
+	:id 3 ;
+	:type 'earthquake';
+	:location 'El Camino';
+	:time '20.01.2019, 3:54 AM';
+	:address '3647 Comanche Pass' ;
+	:patients 26 ;
+	:employees 22 ;
+	:contact '992-137-2371' ;
+	:rescuersInvolved 6;
+	:reportedCasualties 0;
+	:hazardStatus 'ongoing' .

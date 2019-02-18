@@ -41,6 +41,20 @@
     margin: auto;
 }
 
+/*map*/
+/*{*/
+    /*width: 80%;*/
+    /*height: auto;*/
+    /*margin: auto;*/
+    /*background-color: red;*/
+/*}*/
+
+area
+{
+    background-color: red;
+    z-index: 10;
+}
+
 #buttonsAndTimeDiv
 {
     width: 100%;
@@ -171,3 +185,4 @@
     padding: 3px 10px;
     color: #373737;
 }
+

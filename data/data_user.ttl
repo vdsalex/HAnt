@@ -1,0 +1,31 @@
+:Person a rdfs:Class .
+
+:User a owl:Class ;
+	rdfs:subClassOf :Person .
+
+:Admin a owl:Class ;
+	rdfs:subClassOf :User .
+
+:Rescuer a owl:Class ;
+	rdfs:subClassOf :User .
+
+:alex a :Rescuer ;
+	:id 1 ;
+	:name 'Alexandru Voaides' ;
+	:nick 'alex' ;
+	:role 'rescuer';
+	:password 'alex' .
+
+:andrei a :Rescuer ;
+	:id 2 ;
+	:name 'Andrei Leustean' ;
+	:nick 'andrei' ;
+	:role 'rescuer';
+	:password 'andrei' .
+
+:rares a :Admin ;
+	:id 1 ;
+	:name 'Rares Arvinte' ;
+	:nick 'rares' ;
+	:role 'admin';
+	:password 'rares' .

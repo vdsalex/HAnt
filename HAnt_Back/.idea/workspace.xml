@@ -13,80 +13,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+            <state relative-caret-position="255">
+              <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/rescuer.js">
+        <entry file="file://$PROJECT_DIR$/routes/rescuer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
+            <state relative-caret-position="403">
+              <caret line="669" column="19" lean-forward="true" selection-start-line="669" selection-start-column="19" selection-end-line="669" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/login.html">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/rescuer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="207" column="38" lean-forward="true" selection-start-line="207" selection-start-column="38" selection-end-line="207" selection-end-column="38" />
-              <folding>
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/www">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bin/start.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test-conn.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helpers/db-connection.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="250">
+              <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -97,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
+        <option value="HTML File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -104,6 +54,11 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>hospital-floor</find>
+      <find>ground_floo</find>
+      <find>alex</find>
+      <find>floorPlanIm</find>
+      <find>engaged</find>
+      <find>engagedH</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -134,14 +89,17 @@
         <option value="$PROJECT_DIR$/public/admin.html" />
         <option value="$PROJECT_DIR$/public/login.html" />
         <option value="$PROJECT_DIR$/routes/register.js" />
-        <option value="$PROJECT_DIR$/routes/rescuer.js" />
         <option value="$PROJECT_DIR$/routes/admin.js" />
-        <option value="$PROJECT_DIR$/test-conn.js" />
         <option value="$PROJECT_DIR$/helpers/db-connection.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/bin/start.js" />
         <option value="$PROJECT_DIR$/routes/login.js" />
         <option value="$PROJECT_DIR$/public/javascripts/rescuer.js" />
+        <option value="$PROJECT_DIR$/public/rescuer_backup.html" />
+        <option value="$PROJECT_DIR$/test-conn.js" />
+        <option value="$PROJECT_DIR$/public/stylesheets/rescuer_engaged_hazard.css" />
+        <option value="$PROJECT_DIR$/public/javascripts/rescuer_map.js" />
+        <option value="$PROJECT_DIR$/routes/rescuer.js" />
         <option value="$PROJECT_DIR$/public/rescuer.html" />
       </list>
     </option>
@@ -152,7 +110,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="76" />
     <option name="y" value="-24" />
     <option name="width" value="1382" />
@@ -163,22 +121,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="HAnt_Back" type="b2602c69:ProjectViewProjectNode" />
               <item name="HAnt_Back" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HAnt_Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HAnt_Back" type="462c0819:PsiDirectoryNode" />
-              <item name="bin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HAnt_Back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HAnt_Back" type="462c0819:PsiDirectoryNode" />
-              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="HAnt_Back" type="b2602c69:ProjectViewProjectNode" />
@@ -200,16 +149,22 @@
             <path>
               <item name="HAnt_Back" type="b2602c69:ProjectViewProjectNode" />
               <item name="HAnt_Back" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HAnt_Back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HAnt_Back" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.13.0" />
@@ -218,7 +173,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
     <property name="ts.external.directory.path" value="C:\Users\voaid_000\WebstormProjects\HAnt_Back\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -294,23 +249,25 @@
       <workItem from="1549910770479" duration="1415000" />
       <workItem from="1549914722868" duration="11170000" />
       <workItem from="1549964169334" duration="18344000" />
-      <workItem from="1549993086551" duration="5595000" />
+      <workItem from="1549993086551" duration="20923000" />
+      <workItem from="1550039404603" duration="2477000" />
+      <workItem from="1550042056943" duration="1713000" />
+      <workItem from="1550051085178" duration="3489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73345000" />
+    <option name="totallyTimeSpent" value="96352000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32850242" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32850242" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993559" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -443,38 +400,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/popups/dist/popupS.js" />
-    <entry file="file://$PROJECT_DIR$/routes/admin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/rescuer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/register.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test-conn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="6" lean-forward="true" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/helpers/db-connection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -509,10 +438,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/public/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+        <state relative-caret-position="272">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -530,37 +459,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/login.js">
+    <entry file="file://$PROJECT_DIR$/helpers/db-connection.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="64" column="31" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
+        <state relative-caret-position="165">
+          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/login.html">
+    <entry file="file://$PROJECT_DIR$/public/rescuer_backup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/rescuer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/rescuer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="207" column="38" lean-forward="true" selection-start-line="207" selection-start-column="38" selection-end-line="207" selection-end-column="38" />
+        <state relative-caret-position="1151">
+          <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
           <folding>
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/rescuer_near_hazards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/imagemapster/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/rescuer_engaged_hazard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="187" lean-forward="true" selection-start-line="187" selection-end-line="187" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/rescuer_map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="true" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/rescuer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="156" column="108" selection-start-line="156" selection-start-column="108" selection-end-line="156" selection-end-column="108" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-conn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="43" selection-start-line="51" selection-start-column="43" selection-end-line="51" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/rescuer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="87" column="28" lean-forward="true" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="21" column="11" lean-forward="true" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/rescuer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="669" column="19" lean-forward="true" selection-start-line="669" selection-start-column="19" selection-end-line="669" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="18" column="17" lean-forward="true" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
         </state>
       </provider>
     </entry>

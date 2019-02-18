@@ -1,0 +1,131 @@
+:Hazard a rdfs:Class ;
+	:hazardStatus owl:oneOf 'ongoing', 'complete';
+	:affects :Hospital .
+	
+:User a rdfs:Class ;
+	:status owl:oneOf 'alive', 'dead' .
+
+:Fire a owl:Class ;
+	rdfs:subClassOf :Hazard;
+	:implies 'fire';
+	:priority 'burns';
+	:isDetectedBy :FireSensor .
+	
+
+:Flood a owl:Class ;
+	rdfs:subClassOf :Hazard;
+	:implies 'water';
+	:priority 'everyone';
+	:isDetectedBy :FloodSensor .
+
+:Earthquake a owl:Class ;
+	rdfs:subClassOf :Hazard;
+	:implies 'movement';
+	:priority 'paralysis', 'spine';
+	:isDetectedBy :EarthquakeSensor .
+
+:Sensor a owl:Class .
+
+:FireSensor a :Sensor;
+	:isPartOf :Room, :Elevator, :Stair;
+	:detects :Fire .
+
+:EarthquakeSensor a :Sensor;
+	:isPartOf :Room, :Elevator;
+	:detects :Earthquake .
+
+:FloodSensor a :Sensor;
+	:detects :Flood .
+	
+:StabilitySensor a :Sensor .
+
+:Room a owl:Class ;
+	:hasType owl:oneOf 'operation', 'dormitory', 'bathroom';
+	:hasPart :FireSensor, :FloodSensor, :EarthquakeSensor;
+	:isPartOf :Floor .
+	
+:Stair a owl:Class ;
+	:hasPart :FireSensors, :StabilitySensors;
+	:isPartOf :Floor .
+
+:Elevator a owl:Class ;
+	:hasPart :FireSensors, :EarthquakeSensors;
+	:isPartOf :Floor .
+	
+:Floor a owl:Class ;
+	:hasPart :Rooms, :Stairs, :Elevators .
+	
+:Disease a owl:Class ;
+	:stage owl:oneOf 'terminal', 'non-terminal';
+	:physicalAffection owl:oneOf 'spine', 'paralysis', 'burns';
+	:affects :Pacient .
+	
+:Coordinate a owl:Class ;
+	:x xsd:integer;
+	:y xsd:integer.
+	
+:Pacient a owl:Class ;
+	rdfs:subClassOf :User;
+	:role 'pacient';
+	:age xsd:integer;
+	:name xsd:string;
+	:gender owl:oneOF 'male', 'female' ;
+	:hasPart :diseases;
+	:location :coordinates;
+	:isRescuedBy :Rescuer;
+	:isAffectedBy :Disease .
+	
+:Rescuer a owl:Class ;
+	rdfs:subClassOf :User;
+	:role 'rescuer';
+	:rescues :Pacient .
+
+:Medic a :Rescuer ;
+	:function owl:oneOf 'chief', 'assistant' .
+	
+:Admin a :User ;
+	:role 'admin';
+	:configures :Hospital .
+
+:Hospital a owl:Class ;
+	:hasPart :Floors;
+	:houses :Pacients, :Medics;
+	:isAffectedBy :Hazard;
+	:isConfiguredBy :Admin .
+	
+
+:fireAtStSpiridon a :Fire ;
+	:id 1 ;
+	:location 'St. Spiridon';
+	:time 'Today, 10:54 PM';
+	:address '394 Maple Wood Way' ;
+	:patients 22 ;
+	:employees 23 ;
+	:contact '894-128-2938' ;
+	:rescuersInvolved 9;
+	:reportedCasualties 0;
+	:hazardStatus 'ongoing' .
+
+:floodAtMilitaryHospital a :Flood ;
+	:id 2 ;
+	:location 'Military Hospital';
+	:time 'Yesterday, 9:54 PM';
+	:address '246 Acker Point' ;
+	:patients 20 ;
+	:employees 21 ;
+	:contact '002-177-3621' ;
+	:rescuersInvolved 10;
+	:reportedCasualties 0;
+	:hazardStatus 'ongoing' .
+
+:earthquakeAtElCamino a :Earthquake ;
+	:id 3 ;
+	:location 'El Camino';
+	:time '20.01.2019, 3:54 AM';
+	:address '3647 Comanche Pass' ;
+	:patients 26 ;
+	:employees 22 ;
+	:contact '992-137-2371' ;
+	:rescuersInvolved 6;
+	:reportedCasualties 0;
+	:hazardStatus 'ongoing' .
